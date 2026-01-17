@@ -152,8 +152,8 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <div className="relative">
               <h1 className="text-xl font-light tracking-wide text-[#3c4f3d]">
-                <span className="font-normal">EVO</span>
-                <span className="text-[#de8246]">2</span>
+                <span className="font-normal">Nex</span>
+                <span className="text-[#de8246]">Var</span>
               </h1>
               <div className="absolute -bottom-1 left-0 h-[2px] w-12 bg-[#de8246]"></div>
             </div>
