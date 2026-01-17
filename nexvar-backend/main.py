@@ -22,7 +22,7 @@ nexvar_image = (
         "CC": "/usr/bin/gcc",
         "CXX": "/usr/bin/g++",
     })
-    .copy_local_dir("./nexvar", "/nexvar")
+    .add_local_dir("./nexvar", remote_path="/nexvar")
     .run_commands("cd /nexvar && pip install .")
     .run_commands("pip uninstall -y transformer-engine transformer_engine")
     .run_commands("pip install 'transformer_engine[pytorch]==1.13' --no-build-isolation")

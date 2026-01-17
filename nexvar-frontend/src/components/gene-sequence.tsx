@@ -3,7 +3,6 @@
 import type { GeneBounds, GeneDetailsFromSearch } from "~/utils/genome-api";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import {
-  startTransition,
   useCallback,
   useEffect,
   useMemo,
@@ -227,7 +226,7 @@ export function GeneSequence({
       const colorizedChars: JSX.Element[] = [];
 
       for (let j = 0; j < chunk.length; j++) {
-        const nucleotide = chunk[j] || "";
+        const nucleotide = chunk[j] ?? "";
         const nucleotidePosition = lineStartPos + j;
         const color = getNucleotideColorClass(nucleotide);
         colorizedChars.push(
@@ -238,7 +237,7 @@ export function GeneSequence({
               setHoverPosition(nucleotidePosition);
               setMousePosition({ x: e.clientX, y: e.clientY });
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={() => {
               setHoverPosition(null);
               setMousePosition(null);
             }}
@@ -281,8 +280,8 @@ export function GeneSequence({
                 </p>
               </span>
               <span className="text-[#3c4f3d]/70">
-                Selected: {parseInt(startPosition || "0").toLocaleString()} -{" "}
-                {parseInt(endPosition || "0").toLocaleString()} (
+                Selected: {parseInt(startPosition ?? "0").toLocaleString()} -{" "}
+                {parseInt(endPosition ?? "0").toLocaleString()} (
                 {currentRangeSize.toLocaleString()} bp)
               </span>
               <span className="flex items-center gap-1 text-[#3c4f3d]/70">
