@@ -1,6 +1,8 @@
 # NexVar: Advanced Variant Analysis Platform
 
-![NexVar Platform](thumbnail.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Nexis-AI/branding-assets/refs/heads/main/nex_banner.png" alt="Nexis AI Banner" width="100%" />
+</div>
 
 > **Paper**: [Genome modeling and design across all domains of life with NexVar](https://www.biorxiv.org/content/10.1101/2025.02.18.638918v1)  
 > **Repository**: [Eldergenix/NexVar](https://github.com/Eldergenix/NexVar)
